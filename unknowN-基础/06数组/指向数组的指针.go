@@ -7,3 +7,4 @@ func main(){
 	var p *[6]int = &a
 	fmt.Println(p)
 }
+
