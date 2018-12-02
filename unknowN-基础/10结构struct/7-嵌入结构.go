@@ -33,5 +33,5 @@ func main()  {
 	a.human.Sex = "woman"
 	a.Sex = "1111"
 	fmt.Println(a)
-	
+
 }
