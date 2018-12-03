@@ -9,8 +9,9 @@ func main()  {
 	}
 	a()
 
-	b := func() {
-		fmt.Println("Func 匿名")
-	}()
+	b := func(){
+		fmt.Println("Func 匿名11")
+	}
+	b()
 
 }
