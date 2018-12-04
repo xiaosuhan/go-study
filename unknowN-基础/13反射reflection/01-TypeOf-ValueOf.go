@@ -26,6 +26,7 @@ func main()  {
 
 func Info(g interface{})  {
 	t := reflect.TypeOf(g)
+	// t.Name()  这个Name 不是User中的字段，是一个系统的方法。
 	fmt.Println("Type:", t.Name())
 
 	//如果传入的不是值，是指针了，需要加个判断
