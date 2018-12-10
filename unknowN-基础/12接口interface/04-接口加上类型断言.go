@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 //定义一个底层类型是interface的 USB_interface 类型
 // USB_interface 类型包括 Name_func()和 Connect_interface .用到了接口的嵌入
@@ -39,9 +42,15 @@ func main()  {
 }
 
 func Disconnect_func(usb USB_interface)  {
+
+	fmt.Println("=====")
+	fmt.Println(usb)
+	fmt.Println(reflect.TypeOf(usb))
+
 	//如果传入的类型是对的。那ret 就是真，就执行括号里面的，直接return。不会执行最后一句打印的
 	if pc, ret := usb.(PhoneConecter_struct);ret{
 		fmt.Println(pc.name)
+		fmt.Println(pc)
 		return
 	}
 
